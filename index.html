@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+<meta charset="UTF-8">
+<title>Moja Top 4 Automobila</title>
+
+<style>
+    body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        overflow: hidden;
+    }
+
+    nav {
+        background: #111;
+        padding: 15px;
+        text-align: center;
+    }
+
+    nav button {
+        background: none;
+        border: none;
+        color: white;
+        font-size: 18px;
+        font-weight: bold;
+        margin: 0 15px;
+        cursor: pointer;
+    }
+
+    nav button:hover {
+        text-decoration: underline;
+    }
+
+    .page {
+        display: none;
+        height: calc(100vh - 60px);
+        padding: 20px;
+        text-align: center;
+        overflow-y: auto;
+    }
+
+    .active {
+        display: block;
+    }
+
+    h1 {
+        font-size: 36px;
+        margin-bottom: 10px;
+    }
+
+    img {
+        max-width: 550px;
+        width: 100%;
+        margin: 20px auto;
+        display: block;
+        border-radius: 10px;
+    }
+
+    table {
+        margin: 20px auto;
+        width: 70%;
+        font-size: 20px;
+        border-radius: 15px;
+        border: 3px solid black;
+        border-collapse: separate;
+        border-spacing: 0;
+        overflow: hidden;
+    }
+
+    td {
+        padding: 15px 25px;
+        border-bottom: 1px solid black;
+        border-right: 1px solid black;
+        color: black;
+    }
+
+    tr:last-child td {
+        border-bottom: none;
+    }
+
+    td:last-child {
+        border-right: none;
+        background: #f5f5f5;
+    }
+
+    td:first-child {
+        font-weight: bold;
+        background: #ddd;
+    }
+
+    .car-text {
+        width: 70%;
+        margin: 20px auto;
+        font-size: 22px;
+        font-weight: bold;
+        color: black;
+        text-align: justify;
+    }
+
+    .brand-btn {
+        padding: 6px 14px;
+        font-size: 18px;
+        font-weight: bold;
+        background: #111;
+        color: white;
+        border-radius: 6px;
+        text-decoration: none;
+        margin-left: 5px;
+    }
+
+    .brand-btn:hover {
+        background: #333;
+    }
+
+    #aventador { background: #1e1e1e; }
+    #sf90 { background: #b33a3a; }
+    #m5 { background: #002244; }
+    #maybach { background: #3b2f1c; }
+</style>
+
+<script>
+    function showPage(id) {
+        document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+        document.getElementById(id).classList.add('active');
+    }
+</script>
+</head>
+
+<body>
+
+<nav>
+    <button onclick="showPage('aventador')">Aventador SVJ</button>
+    <button onclick="showPage('sf90')">Ferrari SF90</button>
+    <button onclick="showPage('m5')">BMW M5</button>
+    <button onclick="showPage('maybach')">Maybach S580</button>
+</nav>
+
+<!-- AVENTADOR -->
+<div id="aventador" class="page active">
+    <h1>Lamborghini Aventador SVJ</h1>
+    <img src="https://autoblog.rs/gallery/108/lamborghini-aventador-svj%20111.jpg">
+    <table>
+        <tr><td>Motor</td><td>6.5L V12</td></tr>
+        <tr><td>Snaga</td><td>770 KS</td></tr>
+        <tr><td>0–100 km/h</td><td>2.8 s</td></tr>
+        <tr><td>Maks. brzina</td><td>350 km/h</td></tr>
+        <tr><td>Pogon</td><td>AWD</td></tr>
+    </table>
+    <p class="car-text">
+        Lamborghini Aventador SVJ je ekstremna verzija Aventadora sa fokusom na performanse i aerodinamiku. 
+        Model koristi aktivni ALA sistem koji poboljšava stabilnost i brzinu. 
+        SVJ je jedan od najbržih Lamborghinija ikada proizvedenih. 
+        Dizajn je agresivan i prepoznatljiv. 
+        Automobil je razvijen za stazu ali ostaje legalan za put. 
+        Zvanični sajt proizvođača možete posetiti 
+        <a class="brand-btn" href="https://www.lamborghini.com">ovde</a>.
+    </p>
+</div>
+
+<!-- FERRARI -->
+<div id="sf90" class="page">
+    <h1>Ferrari SF90 Stradale</h1>
+    <img src="https://www.thecarexpert.co.uk/wp-content/uploads/2022/07/Ferrari-SF90-Stradale.jpg.webp">
+    <table>
+        <tr><td>Motor</td><td>4.0L V8 + 3 elektro motora</td></tr>
+        <tr><td>Snaga</td><td>~1000 KS</td></tr>
+        <tr><td>0–100 km/h</td><td>2.5 s</td></tr>
+        <tr><td>Maks. brzina</td><td>340 km/h</td></tr>
+        <tr><td>Pogon</td><td>AWD</td></tr>
+    </table>
+    <p class="car-text">
+        Ferrari SF90 Stradale je prvi serijski plug-in hibrid iz Ferrarija. 
+        Kombinuje V8 motor sa tri elektro motora za maksimalne performanse. 
+        Naziv SF90 obeležava jubilej brenda. 
+        Dizajn je inspirisan Formulom 1. 
+        Ovaj model predstavlja budućnost Ferrarija. 
+        Zvanični sajt proizvođača možete posetiti 
+        <a class="brand-btn" href="https://www.ferrari.com">ovde</a>.
+    </p>
+</div>
+
+<!-- BMW -->
+<div id="m5" class="page">
+    <h1>BMW M5</h1>
+    <img src="https://cdn.bmwblog.com/wp-content/uploads/2024/10/2025-bmw-m5-marina-bay-blue-10.jpg">
+    <table>
+        <tr><td>Motor</td><td>4.4L V8 hibrid</td></tr>
+        <tr><td>Snaga</td><td>720+ KS</td></tr>
+        <tr><td>Menjač</td><td>8-stepeni automatski</td></tr>
+        <tr><td>Pogon</td><td>AWD / RWD</td></tr>
+        <tr><td>Klasa</td><td>Sportska limuzina</td></tr>
+    </table>
+    <p class="car-text">
+        BMW M5 je sportska verzija BMW serije 5. 
+        Kombinuje luksuz i izuzetne performanse. 
+        Razvijen je od strane BMW M divizije. 
+        Poznat je po svojoj snazi i upravljivosti. 
+        M5 je ikona sportskih limuzina. 
+        Zvanični sajt proizvođača možete posetiti 
+        <a class="brand-btn" href="https://www.bmw.com">ovde</a>.
+    </p>
+</div>
+
+<!-- MAYBACH -->
+<div id="maybach" class="page">
+    <h1>Mercedes-Maybach S580</h1>
+    <img src="https://storage.googleapis.com/trinityrental-e51d5.appspot.com/IMG_8416_152f001398/IMG_8416_152f001398.jpg">
+    <table>
+        <tr><td>Motor</td><td>4.0L V8 twin-turbo</td></tr>
+        <tr><td>Snaga</td><td>496 KS</td></tr>
+        <tr><td>0–100 km/h</td><td>4.8 s</td></tr>
+        <tr><td>Pogon</td><td>4MATIC</td></tr>
+        <tr><td>Klasa</td><td>Ultra luksuz</td></tr>
+    </table>
+    <p class="car-text">
+        Mercedes-Maybach S580 je ultra luksuzna verzija S-Class modela. 
+        Fokusiran je na udobnost i prestiž. 
+        Enterijer nudi najkvalitetnije materijale. 
+        Vožnja je izuzetno tiha i glatka. 
+        Namenjen je najzahtevnijim kupcima. 
+        Zvanični sajt proizvođača možete posetiti 
+        <a class="brand-btn" href="https://www.mercedes-benz.com">ovde</a>.
+    </p>
+</div>
+
+</body>
+</html>
